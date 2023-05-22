@@ -1,0 +1,59 @@
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+
+body{
+    background-color: grey;
+}
+
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* MENU */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.header.scroll{
+    box-shadow: 0 10px 30px 0 rgba(0,0,0,0.5);
+}
+
+.header .flex{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: yellow;
+}
+
+.header .flex .navbar a{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.header .flex .navbar a:hover{
+    color: orange;
+}
+
+#menu-btn{
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+}

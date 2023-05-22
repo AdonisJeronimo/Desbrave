@@ -1,0 +1,55 @@
+@media (max-width:468px){
+    html{
+        font-size: 55%;
+    }
+}
+/*Dispositios extra pequenos (modo retrato)*/
+
+@media (max-width:576px){
+
+}
+
+/*Dispositios pequenos (modo paisagem)*/
+@media (max-width:768px){
+    #menu-btn {
+        display: inline-block;
+        transition: .5s ease-in-out;
+    }
+
+    /* #menu-btn.uil.uil-times {
+        transform: rotate(180deg);
+    } */
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        border-top: .1rem solid orange;
+        border-bottom: .1rem solid orange;
+        background-color: orange;
+        transition: .5s;
+        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+}
+
+/*Dispositios medio (tablets)*/
+@media (max-width:992px){
+    html{
+        font-size: 55%;
+    }
+}
+
+/*Dispositios grandes(desktop)*/
+@media (max-width:1200px){
+
+}
