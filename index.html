@@ -9,13 +9,15 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="src/images/favicon.ico" type="image/x-icon">
     <!-- SWIPER CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
     <!-- CSS -->
+    <!-- <link rel="stylesheet" href="src/css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/style.css">
@@ -35,12 +37,57 @@
                 <a href="#contact">Contato</a>
             </nav>
 
-            <i class="uil uil-bars" id="menu-btn"></i>
+            <div class="fas fa-bars" id="menu-btn"></div>
+
         </section>
     </header>
-    <!-- MAIN -->
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="swiper bg-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="src/images/Coliseu.jpg" alt="Imagem da Suiça">
+                <div class="text-content">
+                    <h2 class="title">Coliseu <span> - Roma, Italy.</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem. Itaque necessitatibus a aut reiciendis saepe dolorem? Iusto, molestias libero minima ad iure repudiandae praesentium ex obcaecati esse eligendi consequuntur!</p>
+                    <button class="read-btn">Mais Informações <i class="uil uil-arrow-right"></i></button>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <img src="src/images/Arashiyama.jpg" alt="Imagem da Suiça">
+                <div class="text-content">
+                    <h2 class="title">Arashiyama <span> - Quioto, Japão. </span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem. Itaque necessitatibus a aut reiciendis saepe dolorem? Iusto, molestias libero minima ad iure repudiandae praesentium ex obcaecati esse eligendi consequuntur!</p>
+                    <button class="read-btn">Mais Informações <i class="uil uil-arrow-right"></i></button>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <img src="src/images/bg3.jpg" alt="Imagem da Suiça">
+                <div class="text-content">
+                    <h2 class="title">Abismo Anhumas <span> - Mato Grosso do Sul, Brasil. </span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quidem. Itaque necessitatibus a aut reiciendis saepe dolorem? Iusto, molestias libero minima ad iure repudiandae praesentium ex obcaecati esse eligendi consequuntur!</p>
+                    <button class="read-btn">Mais Informações <i class="uil uil-arrow-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slider-thumbs">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </div>
+            </div>
+          </div>
+    </section>
     <!-- FOOTER -->
     
-    <script src="src/js/script.css"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- <script src="src/js/swiper-bundle.min.js"></script> -->
+    <!-- JS -->
+    <script src="src/js/script.js"></script>
 </body>
 </html>

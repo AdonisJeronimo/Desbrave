@@ -2,6 +2,26 @@ let menuBtn = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.header .flex .navbar');
 
 menuBtn.onclick = () =>{
+    menuBtn.classList.toggle('fa-times');
     navbar.classList.toggle('active');
-    console.log("clicou")
 }
+
+// INITIALIZE SWIPER
+var swiper = new Swiper(".bg-slider-thumbs", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+  var swiper2 = new Swiper(".bg-slider", {
+    loop: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });

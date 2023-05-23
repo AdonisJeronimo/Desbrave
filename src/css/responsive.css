@@ -16,9 +16,9 @@
         transition: .5s ease-in-out;
     }
 
-    /* #menu-btn.uil.uil-times {
+    #menu-btn.fa-times {
         transform: rotate(180deg);
-    } */
+    }
 
     .header .flex .navbar {
         position: absolute;
@@ -29,7 +29,7 @@
         border-bottom: .1rem solid orange;
         background-color: orange;
         transition: .5s;
-        /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
     .header .flex .navbar.active {
