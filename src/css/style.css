@@ -3,17 +3,14 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
+
 }
 
 body{
-    background-color: grey;
+    background-color: gray;
 }
 
-/* section{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-} */
+
 
 /* MENU */
 .header{
@@ -21,13 +18,15 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    /* background-color: red; */
     z-index: 1000;
     padding: 1rem;
+    transition: .3s ease;
 }
 
 .header.scroll{
     box-shadow: 0 10px 30px 0 rgba(0,0,0,0.5);
+    background: rgba(255, 255, 255,0.1) ;
+    backdrop-filter: var(--blur);
 }
 
 .header .flex{
@@ -39,18 +38,25 @@ body{
 
 .header .flex .logo{
     font-size: 2.5rem;
-    color: white;
+    color: var(--main-color);
+    transition: .5s ease-in-out;
+}
+
+.header .flex .logo:hover{
+    color: var(--main-color-hover);
+
 }
 
 .header .flex .navbar a{
     margin-left: 2rem;
     font-size: 1.5rem;
     font-weight: 400;
-    color: white;
+    color: var(--main-color);
 }
 
 .header .flex .navbar a:hover{
-    color: orange;
+    color: var(--main-color-hover);
+
 }
 
 #menu-btn{
@@ -89,46 +95,159 @@ body{
 .swiper-slide .text-content{
     position: absolute;
     top: 25%;
-    color: white;
+    color: var(--main-color);
     margin: 0 200px;
-    transition: .3s ease;
 }
 
 .swiper-slide .text-content .title{
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 20px;
+    transform: translateY(-50px);
+    opacity: 0;
 }
 
-.swiper-slide .text-content p{
+.swiper-slide-active .text-content .title{
+    transform: translateY(0px);
+    /* rever se tem necessidade comando acima */
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: .3s;
+    transition-property: transform, opacity;
+}
+
+.swiper-slide .text-content .description{
     max-width: 700px;
+    font-size: 2rem;
+    text-align: justify;
     background: rgba(255, 255, 255,0.1) ;
-    backdrop-filter: blur(10px);
-    /* text-shadow: ; */
-    padding: 20px;
-    border-radius: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    backdrop-filter: var(--blur);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    transform: translateX(5rem);
+    opacity: 0;
 }
 
-.swiper-slide .text-content .read-btn{
+ .read-btn{
     border: none;
     outline: none;
     background: white;
     color: black;
     font-size: 1rem;
-    font-weight: 500;
-    padding: 8px 25px;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
-    margin-top: 40px;
-    border-radius: 10px;
+    margin-top: 4rem;
+    border-radius: 1rem;
     cursor: pointer;
     transition: .5s ease;
+    transform: translateX(50px);
+    opacity: 0;
 }
 
-.swiper-slide .text-content .read-btn:hover{
-    background-color: red;
+.swiper-slide-active .text-content .description,
+.read-btn {
+    transform: translateX(0px);
+    opacity: 1;
+    transition: 2s ease;
+    transition-delay: .3s;
+    transition-property: transform, opacity;
 }
 
+.read-btn:hover{
+    background-color:  rgb(184, 178, 178);
+}
+
+.bg-slider-thumbs{
+    z-index: 999;
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbs-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: var(--blur);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+
+}
+
+.thumbs-container img{
+    width: 50px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.swiper-slide-thumb-active{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.3);
+}
+
+.dark-layer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* ABOUT */
+
+.about{
+    padding: 4rem;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 40rem;
+}
+
+.about .row .image img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about .row .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 40rem;
+}
+
+.about .row .content h2{
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.about .row .content .description{
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;
+    text-align: justify;
+    color: var(--main-color);
+}
+
+.about .read-btn{
+    font-weight: bold;
+    font-size: 1.5rem;
+}

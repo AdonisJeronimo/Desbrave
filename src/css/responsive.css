@@ -12,6 +12,7 @@
 /*Dispositios pequenos (modo paisagem)*/
 @media (max-width:768px){
     #menu-btn {
+        color: var(--main-color);
         display: inline-block;
         transition: .5s ease-in-out;
     }
@@ -25,9 +26,9 @@
         top: 99%;
         left: 0;
         right: 0;
-        border-top: .1rem solid orange;
-        border-bottom: .1rem solid orange;
-        background-color: orange;
+        background-color: var(--bg-opacity);
+        backdrop-filter: var(--blur);
+
         transition: .5s;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }

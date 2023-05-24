@@ -5,6 +5,8 @@
     font-weight: 300;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: .3s ease;
+
 }
 
 a{
