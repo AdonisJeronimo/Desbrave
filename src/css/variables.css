@@ -1,5 +1,6 @@
 :root{
     /* Colors */
+    --body: #332F2E;
     --main-color: #fff;
     --main-color-hover: rgb(184, 178, 178);
     --secondary-color:red;
@@ -9,8 +10,7 @@
 
     /* Effects */
     --box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
-    backdrop-filter: blur(10px);
-    --bg-opacity: rgba(255, 255, 255,0.1);
-    --blur: blur(10px);
+    --bg-opacity: rgba(19, 18, 18, 0.747);
+    --blur: blur(20px);
     
 }

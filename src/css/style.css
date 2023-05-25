@@ -7,7 +7,8 @@ html{
 }
 
 body{
-    background-color: gray;
+    min-width: 320px;
+    background-color: var(--body);
 }
 
 
@@ -25,7 +26,7 @@ body{
 
 .header.scroll{
     box-shadow: 0 10px 30px 0 rgba(0,0,0,0.5);
-    background: rgba(255, 255, 255,0.1) ;
+    background: var(--bg-opacity) ;
     backdrop-filter: var(--blur);
 }
 
@@ -69,6 +70,16 @@ body{
 .home{
     min-height: 100vh;
 }
+.home::before{
+    z-index: 888;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, var(--body));
+}
 
 .bg-slider{
     z-index: 777;
@@ -109,7 +120,6 @@ body{
 
 .swiper-slide-active .text-content .title{
     transform: translateY(0px);
-    /* rever se tem necessidade comando acima */
     opacity: 1;
     transition: 1s ease;
     transition-delay: .3s;
@@ -120,7 +130,7 @@ body{
     max-width: 700px;
     font-size: 2rem;
     text-align: justify;
-    background: rgba(255, 255, 255,0.1) ;
+    background: var(--bg-opacity) ;
     backdrop-filter: var(--blur);
     padding: 2rem;
     border-radius: 1rem;
@@ -132,8 +142,8 @@ body{
  .read-btn{
     border: none;
     outline: none;
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
     font-size: 1rem;
     font-weight: bold;
     padding: 1rem 1.5rem;
@@ -163,7 +173,7 @@ body{
 .bg-slider-thumbs{
     z-index: 999;
     position: absolute;
-    bottom: 7rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -172,7 +182,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--bg-opacity);
     backdrop-filter: var(--blur);
     padding: 1rem;
     border-radius: 1rem;
@@ -207,6 +217,7 @@ body{
 
 .about{
     padding: 4rem;
+    background-color: var(--body);
 }
 
 .about .row{
@@ -223,6 +234,7 @@ body{
 .about .row .image img{
     width: 100%;
     border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,1);
 }
 
 .about .row .content{
@@ -230,17 +242,17 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 40rem;
+    flex: 1 1 50rem;
 }
 
-.about .row .content h2{
+.about .row .content .title{
     font-size: 3rem;
     font-weight: bold;
     color: var(--main-color);
 }
 
 .about .row .content .description{
-    padding: 1rem 0;
+    padding-left: 1rem;
     line-height: 2;
     font-size: 1.6rem;
     text-align: justify;
@@ -250,4 +262,72 @@ body{
 .about .read-btn{
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+/* COURSES */
+
+.differentials{
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+.differentials  .title{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 4rem;
+}
+.heading{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.heading span{
+    color: black;
+    text-transform: uppercase;
+}
+
+.differentials .slide{
+    width: 30rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    transition: .3s ease-in-out;
+    user-select: none;
+}
+.differentials .slide:hover{
+    background-color: var(--main-color-hover);
+}
+
+.differentials .slide img{
+    height: 25rem;
+    width: 100%;
+    border-radius: 2rem;
+}
+
+.differentials .slide h3{
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.differentials .slide p{
+   line-height: 2;
+   font-size: 1.6rem;
+   color: #000;
+}
+
+.swiper-pagination-bullet{
+    background-color: var(--main-color);
+} 
+.swiper-pagination-bullet-active{
+    background-color: var(--main-color);
 }

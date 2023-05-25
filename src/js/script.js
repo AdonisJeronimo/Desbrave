@@ -32,7 +32,38 @@ var swiper = new Swiper(".bg-slider-thumbs", {
   var swiper2 = new Swiper(".bg-slider", {
     loop: true,
     spaceBetween: 0,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
     thumbs: {
       swiper: swiper,
     },
   });
+
+
+  var swiper = new Swiper(".differentials-slider", {
+    loop:false,
+    spaceBetween: 20,
+    slidesPerView: 0,
+    grapCursor:true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+        clickable:true,
+    },
+    breakpoints: {
+        540: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+    },
+});
